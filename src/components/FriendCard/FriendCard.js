@@ -15,7 +15,7 @@ if (this.state.clicked===false){
 }
 
 if (this.state.clicked===true){
-  alert("already clicked");
+  alert("Already Clicked");
   window.location.reload();
 }
  
