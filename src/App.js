@@ -20,22 +20,22 @@ state = {
 }
 
 
- handleClick(event) {
-    event.preventDefault() 
-    var el = event.target
-    this.setState({score: 1})
-    console.log(el)
+ handleClick = (event) => {
+    const current = this.state.score;
+    const add = (current + 1)
+    this.setState({score: add});
+    
   }
  
  render() { 
     return (
       <Wrapper>
-        
-        <Title>Friends List {this.state.score}</Title>
+        <h1>Score: {this.state.score}</h1>
+        <Title>Friends List</Title>
         
         {shuffle(friends).map(friend => (
           <FriendCard
-            onClick={this.handleClick}
+            pleaseWork={this.handleClick}
             clicked={this.clicked}
             id={friend.id}
             key={friend.id}

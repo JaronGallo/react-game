@@ -10,11 +10,13 @@ state = {
 clickedHandler =()=>{
 if (this.state.clicked===false){
   this.setState({clicked:true});
+  this.props.pleaseWork();
   console.log(this.state);
 }
 
 if (this.state.clicked===true){
   alert("already clicked");
+  window.location.reload();
 }
  
 }
